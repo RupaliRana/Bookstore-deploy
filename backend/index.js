@@ -6,22 +6,22 @@ import cors from 'cors';
 
 
 const app = express();
-app.use(cors());
+
 // Middleware for parsing request body
 app.use(express.json());
-
+app.use(cors());
 // Middleware for handling CORS POLICY
 // Option 1: Allow All Origins with Default of cors(*)
 // app.use(cors());
 // Option 2: Allow Custom Origins
-app.use(
-  cors({
-    origin: 'https://bookstore-app-green.vercel.app/',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
-  })
+// app.use(
+//   cors({
+//     origin: 'https://bookstore-app-green.vercel.app/',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type'],
+//   })
 
-);
+// );
 
 app.get('/', (request, response) => {
   console.log(request);
