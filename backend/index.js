@@ -14,14 +14,14 @@ app.use(express.json());
 // Option 1: Allow All Origins with Default of cors(*)
 // app.use(cors());
 // Option 2: Allow Custom Origins
-// app.use(
-//   cors({
-//     origin: 'https://deploy-mern-1whq.vercel.app',
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ['Content-Type'],
-//   })2324DTR1001737863
+app.use(
+  cors({
+    origin: 'https://bookstore-app-green.vercel.app/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
+  })
 
-// );
+);
 
 app.get('/', (request, response) => {
   console.log(request);
