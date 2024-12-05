@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://bookstore-app-green.vercel.app/')
+      .get('https://bookstore-backend-navy.vercel.app/')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
